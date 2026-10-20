@@ -1,0 +1,15 @@
+{
+  "nome": "Casos de borda: ciclo de transições vazias, palavra vazia e símbolo fora do alfabeto",
+  "descricao": "L = {palavra vazia} U 0(0|1)*. Os estados q1 e q2 formam um ciclo de transições vazias",
+  "estados": ["q0", "q1", "q2", "q3"],
+  "alfabeto": ["0", "1"],
+  "inicial": "q0",
+  "finais": ["q2"],
+  "transicoes": {
+    "q0": { "eps": ["q1"] },
+    "q1": { "eps": ["q2"] },
+    "q2": { "eps": ["q1"], "0": ["q3"] },
+    "q3": { "0": ["q3"], "1": ["q3"], "eps": ["q0"] }
+  },
+  "palavras": ["", "0", "01", "0110", "1", "10", "012", "2"]
+}

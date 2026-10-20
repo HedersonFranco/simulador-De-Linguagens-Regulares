@@ -1,0 +1,37 @@
+# AFN-ε obtido pela construção de Thompson para a expressão regular (a|b)*abb
+# (exemplo clássico: tem ciclos de transições ε e vários caminhos não-determinísticos).
+#
+# Formato: rótulo: valor. Comentários começam com '#'.
+# Transição: origem, símbolo -> destino1, destino2   (ε, eps ou lambda = movimento vazio)
+
+nome: (a|b)*abb, construção de Thompson
+descricao: palavras sobre {a, b} que terminam em "abb"
+
+estados: q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10
+alfabeto: a, b
+inicial: q0
+finais: q10
+
+transicoes:
+q0, ε -> q1, q7        # início do fecho de Kleene (a|b)*
+q1, ε -> q2, q4        # escolha entre 'a' e 'b'
+q2, a -> q3
+q4, b -> q5
+q3, ε -> q6
+q5, ε -> q6
+q6, ε -> q1, q7        # volta ao começo (ciclo de ε) ou segue adiante
+q7, a -> q8            # a partir daqui lê "abb"
+q8, b -> q9
+q9, b -> q10
+
+palavras:
+abb
+aabb
+babb
+abbabb
+bbabb
+ab
+abba
+abbb
+bb
+ε                      # palavra vazia

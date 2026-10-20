@@ -1,0 +1,14 @@
+{
+  "nome": "a*b*c* (com transições vazias)",
+  "descricao": "L = { a^i b^j c^k | i, j, k >= 0 }: todos os a antes dos b e todos os b antes dos c",
+  "estados": ["q0", "q1", "q2"],
+  "alfabeto": ["a", "b", "c"],
+  "inicial": "q0",
+  "finais": ["q2"],
+  "transicoes": {
+    "q0": { "a": ["q0"], "ε": ["q1"] },
+    "q1": { "b": ["q1"], "ε": ["q2"] },
+    "q2": { "c": ["q2"] }
+  },
+  "palavras": ["abc", "", "aabbcc", "ac", "bbb", "aab", "cba", "abca", "ba", "abcabc"]
+}
