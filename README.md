@@ -215,7 +215,7 @@ simulador_afn_epsilon/
 │   └── saida.py                  formatação da saída passo a passo
 ├── exemplos/
 │   ├── ex1_a_b_c.json            a*b*c* (JSON, cadeia de ε)
-│   ├── ex2_termina_em_abb.txt    (a|b)*abb por Thompson (TXT, ciclos de ε, 11 estados)
+│   ├── ex2_termina_em_abb.txt    (a|b)*abb por Thompson (TXT, 11 estados, laço do fecho de Kleene)
 │   └── ex3_casos_de_borda.json   ciclo de ε, palavra vazia aceita, símbolo fora de Σ
 ├── testes/
 │   └── test_afn.py               testes automatizados (unittest)

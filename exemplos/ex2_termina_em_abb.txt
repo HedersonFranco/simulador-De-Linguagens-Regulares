@@ -1,5 +1,7 @@
 # AFN-ε obtido pela construção de Thompson para a expressão regular (a|b)*abb
-# (exemplo clássico: tem ciclos de transições ε e vários caminhos não-determinísticos).
+# (exemplo clássico: muitas transições ε e vários caminhos não-determinísticos).
+# Não há ciclo só de ε: o laço do fecho de Kleene (q1 -> q2 -a-> q3 -> q6 -> q1)
+# volta por ε, mas lê um símbolo no caminho. O ciclo de ε está no ex3.
 #
 # Formato: rótulo: valor. Comentários começam com '#'.
 # Transição: origem, símbolo -> destino1, destino2   (ε, eps ou lambda = movimento vazio)
@@ -19,7 +21,7 @@ q2, a -> q3
 q4, b -> q5
 q3, ε -> q6
 q5, ε -> q6
-q6, ε -> q1, q7        # volta ao começo (ciclo de ε) ou segue adiante
+q6, ε -> q1, q7        # volta ao começo do fecho de Kleene ou segue adiante
 q7, a -> q8            # a partir daqui lê "abb"
 q8, b -> q9
 q9, b -> q10
