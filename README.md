@@ -3,13 +3,11 @@
 **Universidade Federal do Piauí — CCN / Departamento de Computação**
 **Disciplina:** Teoria da Computação — **Professor:** Carlos André Batista de Carvalho
 
-**Equipe** (preencher antes de enviar):
+**Equipe:**
 
-| Integrante | Matrícula |
-|---|---|
-| _Nome completo 1_ | _matrícula_ |
-| _Nome completo 2_ | _matrícula_ |
-| _Nome completo 3_ | _matrícula_ |
+* Hederson Franco Benvindo Lima
+* João Guilherme Oliveira Pereira
+* David Soares Pereira Junior
 
 Simulador e reconhecedor de **Autômatos Finitos Não-determinísticos com movimentos vazios
 (AFN-ε)**. O programa lê a definição formal do autômato em um arquivo (JSON ou TXT), processa
