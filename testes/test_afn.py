@@ -250,6 +250,8 @@ class TestLeitor(unittest.TestCase):
         self.erro_em("e2.txt", "estados: q0\nsoltos\n", "linha 2")
         self.erro_em("e3.txt", "estados: q0\nestados: q1\n", "linha 2")
         self.erro_em("e4.txt", "estados: q0\n", "obrigatório")
+        self.erro_em("e5.txt", "estados: q0\nalfabeto: 10, 11\ninicial: q0\nfinais: q0\ntransicoes:\n",
+                     "único caractere")
 
     def test_erros_do_json(self):
         self.erro_em("e1.json", "{ isto nao e json", "JSON inválido")

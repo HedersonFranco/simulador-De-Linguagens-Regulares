@@ -223,10 +223,8 @@ def _ler_txt(texto: str) -> Dict:
 
 
 def _valor_txt(campo: str, valor: str, numero: int):
-    if campo in ("estados", "finais"):
+    if campo in ("estados", "alfabeto", "finais"):
         return _separar_itens(_sem_chaves(valor))
-    if campo == "alfabeto":
-        return [c for c in _sem_chaves(valor) if not c.isspace() and c != ","]
     if campo == "inicial":
         itens = _separar_itens(valor)
         if len(itens) != 1:
