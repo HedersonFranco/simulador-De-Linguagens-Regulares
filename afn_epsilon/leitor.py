@@ -256,4 +256,4 @@ def _transicao_txt(linha: str, numero: int) -> Transicao:
 
 
 def _palavras_txt(linha: str) -> List[str]:
-    return [normalizar_palavra(p.strip()) for p in linha.split(",") if p.strip()]
+    return [normalizar_palavra(p) for p in _separar_itens(linha)]

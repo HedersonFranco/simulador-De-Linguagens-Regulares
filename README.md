@@ -122,7 +122,8 @@ cba
   (separado por vírgulas e/ou espaços; chaves `{q0, q1}` são opcionais).
 * `transicoes:` e `palavras:` ocupam as linhas seguintes. Transição: `origem, símbolo -> destino1, destino2`
   (a seta `→` também vale). Linhas repetidas com a mesma origem e o mesmo símbolo **se unem**
-  (é assim que se escreve o não-determinismo). Palavras: uma por linha (ou separadas por vírgula).
+  (é assim que se escreve o não-determinismo). Palavras: uma por linha, ou várias na mesma linha
+  separadas por vírgulas e/ou espaços.
 * Comentário: `#` no começo da linha ou depois de um espaço.
 
 ### 4.3 Regras comuns

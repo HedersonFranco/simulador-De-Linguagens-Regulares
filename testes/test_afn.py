@@ -219,12 +219,13 @@ class TestLeitor(unittest.TestCase):
         q2, c -> q2
         palavras: abc, ""
         ε
+        ab ba
         """
         m_txt, palavras, _ = carregar_arquivo(self.escrever("a.txt", txt))
         m_json, _, _ = carregar_arquivo(exemplo("ex1_a_b_c.json"))
         self.assertEqual(m_txt.delta, m_json.delta)
         self.assertEqual(m_txt.estados, m_json.estados)
-        self.assertEqual(palavras, ["abc", "", ""])
+        self.assertEqual(palavras, ["abc", "", "", "ab", "ba"])
 
     def test_json_com_apelidos_e_destino_unico_em_texto(self):
         json_ = ('{"Q": ["s", "t"], "Sigma": ["x"], "q0": "s", "F": ["t"], '
