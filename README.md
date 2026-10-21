@@ -258,9 +258,15 @@ python -m unittest discover -s testes -v
 ```
 
 São 32 testes: fecho-ε (cadeias, ciclos, auto-laços), passo e simulação, validação das definições,
-leitura de JSON/TXT, saída e linha de comando. Dois deles confrontam o simulador com um **oráculo
-independente** (busca no grafo de configurações *(estado, posição)*, que é a definição de computação):
-todas as palavras de até 8 símbolos no `ex2` e de até 7 no `ex1`, e 300 autômatos aleatórios com todas as palavras de até 5 símbolos.
+leitura de JSON/TXT, saída e linha de comando. Três deles testam a simulação em massa:
+
+* `ex2`: todas as palavras sobre {a, b} de até 8 símbolos, comparadas com a definição da linguagem
+  (aceita ⇔ termina em `abb`);
+* `ex1`: todas as palavras sobre {a, b, c} de até 7 símbolos (aceita ⇔ os `a` vêm antes dos `b`, e os
+  `b` antes dos `c`);
+* 300 autômatos aleatórios de até 5 estados (podem ter ciclos de ε e auto-laços), com todas as palavras
+  sobre {a, b} de até 5 símbolos, comparados com um **oráculo independente**: uma busca no grafo de
+  configurações *(estado, posição)*, que é a definição de computação de um AFN-ε.
 
 ## 10. Decisões de projeto
 
