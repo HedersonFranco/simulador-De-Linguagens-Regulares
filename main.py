@@ -7,7 +7,7 @@ Uso:
     python main.py ARQUIVO                 # processa as palavras listadas no arquivo
     python main.py ARQUIVO -p abba -p ε    # testa também outras palavras (ε = palavra vazia)
     python main.py ARQUIVO -i              # depois, pergunta novas palavras no terminal
-    python main.py ARQUIVO --ascii         # saída só com caracteres ASCII
+    python main.py ARQUIVO --ascii         # troca ε, ∅, ∩... por eps, {}, inter...
 """
 
 import argparse
@@ -31,7 +31,7 @@ def criar_parser() -> argparse.ArgumentParser:
     parser.add_argument("-i", "--interativo", action="store_true",
                         help="depois das palavras do arquivo, lê novas palavras do teclado")
     parser.add_argument("--ascii", action="store_true",
-                        help="usa apenas caracteres ASCII na saída (eps, {}, inter, ...)")
+                        help="troca os símbolos matemáticos da saída por texto ASCII (eps, {}, inter, ...)")
     return parser
 
 

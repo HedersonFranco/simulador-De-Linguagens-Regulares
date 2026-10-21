@@ -34,7 +34,8 @@ uma lista de palavras e mostra, **passo a passo**, o conjunto de estados ativos 
 * **Nenhuma dependência externa** (não há `pip install`) e **nenhuma etapa de compilação**:
   Python é interpretado, basta executar `main.py`.
 * Terminal com UTF-8 para exibir `ε`, `∅`, `∩`, `δ`... Se o terminal não suportar, o programa
-  troca sozinho para uma saída só com ASCII (ou use `--ascii`).
+  troca sozinho esses símbolos por texto ASCII (`eps`, `{}`, `inter`, `delta`...); para forçar, use
+  `--ascii`. Os acentos do português continuam na saída.
 
 ## 3. Como executar
 
@@ -52,7 +53,7 @@ Opções (todas opcionais):
 |---|---|
 | `-p PALAVRA`, `--palavra PALAVRA` | testa também esta palavra; pode repetir. Palavra vazia: `-p ε` (ou `-p ""` no bash/cmd; no PowerShell, `-p '""'`) |
 | `-i`, `--interativo` | depois das palavras do arquivo, pede novas palavras no teclado (`sair` ou Ctrl+D encerra) |
-| `--ascii` | saída só com ASCII (`eps`, `{}`, `inter`, `delta`...) |
+| `--ascii` | troca os símbolos matemáticos por texto ASCII (`eps`, `{}`, `inter`, `delta`...) |
 | `-h`, `--help` | ajuda |
 
 Exemplos: `python main.py exemplos/ex1_a_b_c.json -p abbc -p ε` e
