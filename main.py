@@ -5,7 +5,7 @@ Simulador de Linguagens Regulares: reconhecedor de AFN-ε (Teoria da Computaçã
 
 Uso:
     python main.py ARQUIVO                 # processa as palavras listadas no arquivo
-    python main.py ARQUIVO -p abba -p ""   # testa também outras palavras ("" = palavra vazia)
+    python main.py ARQUIVO -p abba -p ε    # testa também outras palavras (ε = palavra vazia)
     python main.py ARQUIVO -i              # depois, pergunta novas palavras no terminal
     python main.py ARQUIVO --ascii         # saída só com caracteres ASCII
 """
@@ -27,7 +27,7 @@ def criar_parser() -> argparse.ArgumentParser:
     parser.add_argument("arquivo", help="arquivo .json ou .txt com o autômato e as palavras de teste")
     parser.add_argument("-p", "--palavra", action="append", default=[], metavar="PALAVRA",
                         help='testa também esta palavra (repita a opção para várias; '
-                             'use "" ou ε para a palavra vazia)')
+                             'use ε para a palavra vazia)')
     parser.add_argument("-i", "--interativo", action="store_true",
                         help="depois das palavras do arquivo, lê novas palavras do teclado")
     parser.add_argument("--ascii", action="store_true",

@@ -50,12 +50,12 @@ Opções (todas opcionais):
 
 | Opção | Efeito |
 |---|---|
-| `-p PALAVRA`, `--palavra PALAVRA` | testa também esta palavra; pode repetir. `-p ""` (ou `-p ε`) é a palavra vazia |
+| `-p PALAVRA`, `--palavra PALAVRA` | testa também esta palavra; pode repetir. Palavra vazia: `-p ε` (ou `-p ""` no bash/cmd; no PowerShell, `-p '""'`) |
 | `-i`, `--interativo` | depois das palavras do arquivo, pede novas palavras no teclado (`sair` ou Ctrl+D encerra) |
 | `--ascii` | saída só com ASCII (`eps`, `{}`, `inter`, `delta`...) |
 | `-h`, `--help` | ajuda |
 
-Exemplos: `python main.py exemplos/ex1_a_b_c.json -p abbc -p ""` e
+Exemplos: `python main.py exemplos/ex1_a_b_c.json -p abbc -p ε` e
 `python main.py exemplos/ex2_termina_em_abb.txt -i`.
 
 **Código de saída:** `0` = executou; `1` = não havia palavra para testar; `2` = arquivo ausente
