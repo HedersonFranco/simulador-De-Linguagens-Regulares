@@ -215,6 +215,10 @@ def _ler_txt(texto: str) -> Dict:
             campos["transicoes"].append(_transicao_txt(linha, numero))
         elif secao == "palavras":
             campos["palavras"].extend(_palavras_txt(linha))
+        elif ":" in linha:
+            raise ErroDefinicao(
+                f"linha {numero}: rótulo desconhecido {linha.partition(':')[0].strip()!r}. Use estados, "
+                "alfabeto, inicial, finais, transicoes e palavras (veja o README).")
         else:
             raise ErroDefinicao(
                 f"linha {numero}: conteúdo fora de uma seção: {linha!r}. Os campos estados, alfabeto, "

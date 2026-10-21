@@ -135,7 +135,8 @@ cba
 * **Apelidos de campos** (maiúsculas/minúsculas não importam): `Q`; `Sigma`/`Σ`; `q0`/`estado_inicial`;
   `F`/`estados_finais`; `delta`/`δ`/`transições`; `cadeias`/`testes`.
 * **Validação:** estado inicial ou final fora de Q, transição com estado/símbolo desconhecido, campo
-  ausente, JSON malformado etc. geram uma mensagem de erro clara. Campos desconhecidos geram um `AVISO`.
+  ausente, JSON malformado etc. geram uma mensagem de erro clara. Campos desconhecidos geram um `AVISO`
+  no JSON; no TXT, um rótulo desconhecido é erro (com o número da linha).
 * **Símbolo fora de Σ numa palavra de teste:** a palavra não pertence a Σ\*, então é `REJEITADA`;
   a saída marca o símbolo com um `AVISO`.
 * Codificação: UTF-8 (com ou sem BOM; arquivos "ANSI" do Windows também são lidos).
