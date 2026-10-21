@@ -29,7 +29,7 @@ uma lista de palavras e mostra, **passo a passo**, o conjunto de estados ativos 
 
 ## 2. Requisitos de ambiente
 
-* **Python 3.8 ou superior** (desenvolvido e testado com Python 3.12). Verifique com `python --version`
+* **Python 3.8 ou superior** (testado com Python 3.14). Verifique com `python --version`
   (no Linux/macOS pode ser `python3`; no Windows, `py`).
 * **Nenhuma dependência externa** (não há `pip install`) e **nenhuma etapa de compilação**:
   Python é interpretado, basta executar `main.py`.
