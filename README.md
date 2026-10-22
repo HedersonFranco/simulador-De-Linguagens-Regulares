@@ -1,7 +1,10 @@
 # Trabalho 01 — Simulador de Linguagens Regulares (AFN-ε)
 
 **Universidade Federal do Piauí — CCN / Departamento de Computação**
+
 **Disciplina:** Teoria da Computação — **Professor:** Carlos André Batista de Carvalho
+
+**Repositório:** <https://github.com/HedersonFranco/simulador-De-Linguagens-Regulares>
 
 **Equipe:**
 
@@ -39,7 +42,13 @@ uma lista de palavras e mostra, **passo a passo**, o conjunto de estados ativos 
 
 ## 3. Como executar
 
-Descompacte o `.zip`, entre na pasta do projeto e rode:
+Baixe o projeto e entre na pasta dele (a que contém o `main.py`):
+
+* **GitHub:** `git clone https://github.com/HedersonFranco/simulador-De-Linguagens-Regulares.git`
+  e depois `cd simulador-De-Linguagens-Regulares`;
+* **SIGAA:** descompacte o `.zip` e entre na pasta `simulador_afn_epsilon`.
+
+Depois rode:
 
 ```bash
 python main.py exemplos/ex1_a_b_c.json            # AFN-ε de a*b*c*          (JSON)
@@ -225,6 +234,9 @@ simulador_afn_epsilon/
 └── docs/
     └── FUNDAMENTACAO_TEORICA.md  teoria do zero, algoritmos e perguntas para estudar
 ```
+
+O `.zip` entregue no SIGAA tem exatamente os arquivos versionados neste repositório (sem a pasta
+`.git`). Para gerá-lo de novo: `git archive --format=zip --prefix=simulador_afn_epsilon/ -o ../simulador_afn_epsilon.zip HEAD`.
 
 ## 7. Como funciona
 
