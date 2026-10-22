@@ -17,13 +17,15 @@ Simulador e reconhecedor de **Autômatos Finitos Não-determinísticos com movim
 uma lista de palavras e mostra, **passo a passo**, o conjunto de estados ativos até concluir
 `ACEITA` ou `REJEITADA`.
 
+**Para testar o trabalho passo a passo, siga o roteiro em [COMO_TESTAR.md](COMO_TESTAR.md).**
+
 ## 1. Checklist do enunciado
 
 | Exigência do PDF | Onde está atendida |
 |---|---|
 | Linguagem livre | Python 3 |
 | Proibido usar bibliotecas de Teoria da Computação, Grafos ou Autômatos; fecho-ε e rastreamento feitos à mão | `afn_epsilon/automato.py` (`fecho_epsilon`, `mover`, `simular`); só biblioteca padrão (seção 8) |
-| Pacote `.zip` com código-fonte e README com instruções | este pacote; seções 3 e 4 |
+| Pacote `.zip` com código-fonte e README com instruções | este pacote; seções 3 e 4 e o roteiro [COMO_TESTAR.md](COMO_TESTAR.md) |
 | Entrada (TXT ou JSON): Q, Σ, q0, F, tabela δ com transições ε e lista de palavras | seção 4 |
 | Saída: conjunto inicial de estados ativos (com o fecho-ε do estado inicial) | linha `[Início]` |
 | Saída: para cada símbolo lido, o caractere e o novo conjunto de estados ativos | blocos `[Passo n]` |
@@ -219,6 +221,7 @@ acrescenta tudo o que se alcança de graça por transições vazias; o resultado
 ```text
 simulador_afn_epsilon/
 ├── README.md                     este arquivo
+├── COMO_TESTAR.md                passo a passo para testar o trabalho
 ├── main.py                       programa principal (linha de comando)
 ├── afn_epsilon/
 │   ├── __init__.py
