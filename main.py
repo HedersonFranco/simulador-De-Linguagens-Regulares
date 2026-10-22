@@ -39,7 +39,7 @@ def sessao_interativa(automato, estilo, resultados) -> None:
     """Lê palavras do teclado até 'sair' (ou Ctrl+D / Ctrl+Z) e simula cada uma."""
     print()
     print("Modo interativo: digite uma palavra e tecle Enter.")
-    print('  (ε, λ ou "" = palavra vazia; "sair" ou Ctrl+D encerra)')
+    print('  (ε, λ ou "" = palavra vazia; "sair" encerra)')
     while True:
         try:
             entrada = input("palavra> ").strip()

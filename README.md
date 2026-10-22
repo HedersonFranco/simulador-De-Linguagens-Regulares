@@ -52,7 +52,7 @@ Opções (todas opcionais):
 | Opção | Efeito |
 |---|---|
 | `-p PALAVRA`, `--palavra PALAVRA` | testa também esta palavra; pode repetir. Palavra vazia: `-p ε` (ou `-p ""` no bash/cmd; no PowerShell, `-p '""'`) |
-| `-i`, `--interativo` | depois das palavras do arquivo, pede novas palavras no teclado (`sair` ou Ctrl+D encerra) |
+| `-i`, `--interativo` | depois das palavras do arquivo, pede novas palavras no teclado (`sair` encerra) |
 | `--ascii` | troca os símbolos matemáticos por texto ASCII (`eps`, `{}`, `inter`, `delta`...) |
 | `-h`, `--help` | ajuda |
 
