@@ -252,7 +252,8 @@ autômatos (nem `re`, `networkx`, `automata-lib`...). O fecho-ε e o rastreament
 implementados à mão em `afn_epsilon/automato.py`. Só entra a biblioteca padrão do Python, para tarefas
 que nada têm a ver com autômatos: `json` e `os` (leitura de arquivos), `argparse` e `sys` (linha de
 comando), `dataclasses` e `typing` (registros de dados), `textwrap` (quebra de linha na saída).
-Os testes usam também `unittest`, `itertools`, `random` e `tempfile`.
+Os testes usam também `unittest` (com `unittest.mock`), `contextlib`, `glob`, `io`, `itertools`, `random`,
+`tempfile` e `types`.
 
 ## 9. Testes automatizados
 
