@@ -234,12 +234,12 @@ simulador_afn_epsilon/
 │   └── ex3_casos_de_borda.json   ciclo de ε, palavra vazia aceita, símbolo fora de Σ
 ├── testes/
 │   └── test_afn.py               testes automatizados (unittest)
-└── docs/
+└── docs/                         só no repositório (fica fora do .zip)
     └── FUNDAMENTACAO_TEORICA.md  teoria do zero, algoritmos e perguntas para estudar
 ```
 
-O `.zip` entregue no SIGAA tem exatamente os arquivos versionados neste repositório (sem a pasta
-`.git`). Para gerá-lo de novo: `git archive --format=zip --prefix=simulador_afn_epsilon/ -o ../simulador_afn_epsilon.zip HEAD`.
+O `.zip` entregue no SIGAA traz só o necessário para executar e avaliar o trabalho: ficam de fora a
+configuração do Git e a pasta `docs/`, marcadas com `export-ignore` no `.gitattributes`. Para gerá-lo de novo: `git archive --format=zip --prefix=simulador_afn_epsilon/ -o ../simulador_afn_epsilon.zip HEAD`.
 
 ## 7. Como funciona
 
@@ -258,7 +258,8 @@ w é aceita  ⇔  Sn ∩ F ≠ ∅
   testa a interseção com F no final.
 
 Custo por palavra: O(|w| · (|Q| + |δ|)), sem backtracking. A teoria completa, com exemplos e
-perguntas de estudo, está em [`docs/FUNDAMENTACAO_TEORICA.md`](docs/FUNDAMENTACAO_TEORICA.md).
+perguntas de estudo, está em [`docs/FUNDAMENTACAO_TEORICA.md`](docs/FUNDAMENTACAO_TEORICA.md), no repositório
+(não vai no `.zip`).
 
 ## 8. Restrição de bibliotecas
 
