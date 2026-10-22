@@ -56,8 +56,8 @@ def sessao_interativa(automato, estilo, resultados) -> None:
 
 
 def main(argv=None) -> int:
+    configurar_saida()                     # antes do argparse: o texto do --help também tem ε
     args = criar_parser().parse_args(argv)
-    configurar_saida()
     estilo = escolher_estilo(args.ascii)
 
     try:

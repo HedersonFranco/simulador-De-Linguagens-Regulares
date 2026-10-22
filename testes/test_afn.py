@@ -316,6 +316,10 @@ class TestSaidaECLI(unittest.TestCase):
             self.assertIs(escolher_estilo(), ESTILO_ASCII)
         with mock.patch.object(sys, "stdout", types.SimpleNamespace(encoding="utf-8")):
             self.assertIs(escolher_estilo(), ESTILO_UNICODE)
+        # o texto do --help tem ε: não pode quebrar num terminal sem Unicode
+        terminal_ascii = io.TextIOWrapper(io.BytesIO(), encoding="ascii")
+        with mock.patch.object(sys, "stdout", terminal_ascii), self.assertRaises(SystemExit):
+            cli.main(["--help"])
 
     def test_erros_devolvem_codigo_diferente_de_zero(self):
         codigo, _, erro = executar(["nao_existe.json"])
